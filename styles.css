@@ -176,6 +176,7 @@ figcaption {
   background-color: rgb(195, 177, 144);
   border-radius: 10px;
   padding: 1rem;
+
   margin: 1rem;
   box-shadow: 20px 40px 10px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -223,6 +224,7 @@ figcaption {
 #education {
   position: relative;
   flex-direction: column;
+  padding: 0.5rem;
 }
 .slide-align {
   display: flex;
@@ -373,8 +375,18 @@ input[type="radio"] {
   }
 
   .content {
-    /* Розміщення карток в одну колонку  */
-    flex-direction: column;
+    margin: 0;
+    align-content: center;
+  }
+  .card {
+    padding-top: 1.5rem;
+  }
+
+  body {
+    font-size: 1.3em;
+  }
+  .problems {
+    margin: 0;
   }
 }
 
