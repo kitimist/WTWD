@@ -15,15 +15,15 @@ body {
 header {
   box-sizing: border-box;
   display: flex;
-  padding: 1rem;
-  background-color: rgb(207, 184, 157);
   justify-content: space-between;
   align-items: center;
+  background-color: rgb(185, 174, 160);
+  padding: 1rem 2rem;
   position: sticky;
   top: 0;
   width: 100%;
-  font-size: 1em;
   z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 section {
@@ -37,9 +37,10 @@ section {
 
 footer {
   box-sizing: border-box;
-  background-color: rgb(207, 184, 157);
+  background-color: rgb(185, 174, 160);
   width: 100%;
   padding: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 p {
@@ -59,11 +60,11 @@ h3 {
 
 button {
   padding: 0.5em;
-  border-radius: 13%;
+  border-radius: 10px;
   font-size: 0.8em;
   font-weight: bold;
   margin: 1rem;
-  width: mфч-content;
+  width: max-content;
   cursor: pointer;
   white-space: nowrap;
 }
@@ -72,6 +73,7 @@ a {
   color: rgb(81, 92, 123);
   font-weight: bold;
   text-decoration: none;
+  margin: 0.1em;
 }
 button:hover {
   background-color: rgba(138, 136, 136, 0.379);
@@ -89,9 +91,9 @@ a:hover {
 }
 
 .logo img {
-  max-width: 50px;
-  border-radius: 20%;
-  margin: 1rem;
+  max-width: 60px;
+  border-radius: 15px;
+  margin: 0.5rem;
 }
 
 .content {
@@ -104,14 +106,15 @@ a:hover {
 #intro img,
 #info img {
   max-width: 400px;
-  margin: 1.5em;
-  border-radius: 4%;
+  margin: 0 2em;
+  border-radius: 10px;
   box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);
   border: 3px solid rgb(88, 78, 78);
 }
 #intro article {
   display: flex;
   flex-direction: column;
+  margin: 1em;
 }
 .sign {
   align-self: flex-end;
@@ -127,6 +130,7 @@ a:hover {
   padding: 1.5rem;
   margin: 2rem;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .problems img {
@@ -134,44 +138,39 @@ a:hover {
   border-radius: 50%;
 }
 .descrip {
-  visibility: hidden;
+  display: none;
   font-style: normal;
   text-align: center;
   transition: color 0.3s ease;
+  font-weight: 400;
 }
 .problems:hover {
   box-shadow: 20px 40px 10px rgba(0, 0, 0, 0.1);
-
+  transform: scale(1.1);
   background-color: rgba(229, 228, 228, 0.236);
-  border-radius: 5%;
+  border-radius: 15px;
   transition: background-color 0.3s ease;
 }
 .problems:hover .descrip {
-  visibility: visible;
-}
-
-.background-blur {
-  background-color: rgba(255, 255, 255, 0.13);
-  border-radius: 3%;
-  padding: 1.5rem;
+  display: flex;
 }
 
 figure {
   text-align: center;
-  align-items: center;
 }
 figcaption {
-  background-color: rgba(255, 255, 255, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
   border-radius: 10px;
-  padding: 0.7em;
+  padding: 0.5em 0;
+  margin: 0;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   max-width: 500px;
-  min-height: 500px;
-  text-align: justify;
+  min-height: 450px;
+
   align-items: center;
   background-color: rgb(195, 177, 144);
   border-radius: 10px;
@@ -181,13 +180,12 @@ figcaption {
   box-shadow: 20px 40px 10px rgba(0, 0, 0, 0.1);
   position: relative;
   border: 3px solid rgb(88, 78, 78);
-  justify-content: center;
+  justify-content: flex-start;
 }
 .name {
   font-weight: bold;
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+  position: sticky;
+  align-self: flex-start;
 }
 .card > .icon {
   align-self: flex-end;
@@ -327,11 +325,11 @@ input[type="radio"] {
   padding: 1em;
   font-size: 1em;
 
-  background-color: rgb(207, 184, 157);
+  background-color: rgb(185, 174, 160);
 }
 
 .mobile-nav li:hover {
-  background-color: rgb(143, 120, 91);
+  background-color: rgb(163, 155, 144);
   color: aliceblue;
 }
 
@@ -380,6 +378,7 @@ input[type="radio"] {
   }
   .card {
     padding-top: 1.5rem;
+    min-height: 300px;
   }
 
   body {
@@ -403,5 +402,8 @@ input[type="radio"] {
   button {
     font-size: 0.5;
     margin: 0.5rem;
+  }
+  header {
+    font-size: 0.9em;
   }
 }
